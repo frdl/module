@@ -105,30 +105,33 @@
 	],    
 	"frdlweb:check.security": [				
 		
+	],       
+	"frdlweb:compile": [				
+		
 	],    
 			
-        "pre-package-install": "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processPackageEvent",
-        "post-package-install": "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processPackageEvent",
-        "pre-package-update": "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processPackageEvent",
-        "post-package-update": "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processPackageEvent",
-        "pre-package-uninstall": "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processPackageEvent",
-        "post-package-uninstall": "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processPackageEvent",
+        "pre-package-install": "Webfan\\Support\\EventHooks\\BasePackageUpdaterCustomHook::processPackageEvent",
+        "post-package-install": "Webfan\\Support\\EventHooks\\BasePackageUpdaterCustomHook::processPackageEvent",
+        "pre-package-update": "Webfan\\Support\\EventHooks\\BasePackageUpdaterCustomHook::processPackageEvent",
+        "post-package-update": "Webfan\\Support\\EventHooks\\BasePackageUpdaterCustomHook::processPackageEvent",
+        "pre-package-uninstall": "Webfan\\Support\\EventHooks\\BasePackageUpdaterCustomHook::processPackageEvent",
+        "post-package-uninstall": "Webfan\\Support\\EventHooks\\BasePackageUpdaterCustomHook::processPackageEvent",
 			
         "post-update-cmd": [
-			"Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processCommandEvent"
+		"Webfan\\Support\\EventHooks\\BasePackageUpdaterCustomHook::processCommandEvent"
 		],
         "post-install-cmd": [
-            "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processCommandEvent"
+            "Webfan\\Support\\EventHooks\\BasePackageUpdaterCustomHook::processCommandEvent"
         ],
         "post-autoload-dump": [
-            "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processCommandEvent"
-        ],			
-		"post-root-package-install": [
-            "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processCommandEvent"
+            "Webfan\\Support\\EventHooks\\BasePackageUpdaterCustomHook::processCommandEvent"
+        ],		
+	    
+	"post-root-package-install": [
+            "Webfan\\Support\\EventHooks\\BasePackageUpdaterCustomHook::processCommandEvent"
         ],
         "post-create-project-cmd": [
-			"Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processCommandEvent",
-            "@test"
+	    "Webfan\\Support\\EventHooks\\BasePackageUpdaterCustomHook::processCommandEvent"
         ]
     },	
   "autoload": {
