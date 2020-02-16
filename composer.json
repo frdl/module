@@ -55,10 +55,10 @@
 	"frdlweb:stage.generate.misc-autoloader": [				
 		
 	],	    
-	"frdlweb:stage.generate.class.Webfan\App\Shield": [				
+	"frdlweb:stage.generate.class.Webfan\\App\\Shield": [				
 		
 	],	    
-	"frdlweb:stage.generate.class.compiled\project": [				
+	"frdlweb:stage.generate.class.compiled\\project": [				
 		
 	],
 	"frdlweb:stage.write.project.json": [				
