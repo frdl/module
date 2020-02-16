@@ -1,0 +1,30 @@
+{
+  "name" : "frdl/module",
+  "type" : "frdl-module",
+  "description": "Skeleton for `${package.type}` Composer-Package-Type, to be cloned by `composer create project`.", 
+  "license": ["MIT"],	  
+  "require" : {
+	  "php": ">=7.1",
+		"frdl/frdlweb-composer-installers": "*",
+		"frdl/web" : "*",
+	  "frdl/json-rpc-server-eventable": "*",		
+		"datto/json-rpc" : "6.0.0",	
+		"frdl/event-module" : "*",
+		"frdl/console" : "*"
+
+  },
+  "autoload": {
+        "psr-4": {
+            "example\\org\\": "src/example.org/"
+        },
+		"classmap": ["src/misc/"]
+  },  
+ "suggest" : {
+	 "frdl/project" : "Frdlweb Project Root Package Template",	
+	 "frdl/cms" : "A collection of packages recommended for a content management system based on Frdlweb",	  
+	 "frdl/frdlweb-cms-db" : "Most of the frdl-module/frdl-theme packages require this Database Module",
+	 "frdl/nav" : "Add Navigation Menus to your Frdlweb Project",
+	 "frdl/auth-webfan" : "Login and User Registration Management",
+	 "frdl/frdlweb-software-support" : "Software Integration Tools"
+  }
+}
