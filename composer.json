@@ -15,7 +15,8 @@
   },
   "autoload": {
         "psr-4": {
-            "example\\org\\": "src/example.org/"
+            "example\\org\\": "src/example.org/",
+	    "frdlweb\\Plugin\\": "src/spec.frdlweb.de/frdl-module/"	
         },
 		"classmap": ["src/misc/"]
   },  
