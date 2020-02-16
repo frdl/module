@@ -7,12 +7,130 @@
 	  "php": ">=7.1",
 		"frdl/frdlweb-composer-installers": "*",
 		"frdl/web" : "*",
-	  "frdl/json-rpc-server-eventable": "*",		
+	        "frdl/json-rpc-server-eventable": "*",		
 		"datto/json-rpc" : "6.0.0",	
 		"frdl/event-module" : "*",
 		"frdl/console" : "*"
 
   },
+    "scripts": {
+        "test": [				
+		
+	],
+	    
+	"frdlweb:stage.write.configs": [				
+		
+	],
+	    
+	"frdlweb:stage.bundlejs:prepare": [				
+		
+	],	    
+	"frdlweb:stage.bundlejs:action": [				
+		
+	],	    
+	"frdlweb:stage.backup:dist": [				
+		
+	],	    
+	"frdlweb:stage.deploy:frdlweb": [				
+		
+	],	    
+	"frdlweb:stage.clear:appJs": [				
+		
+	],	    
+	"frdlweb:stage.autoload": [				
+		
+	],	    
+	"frdlweb:stage.generate.index.web": [				
+		
+	],	    
+	"frdlweb:stage.generate.index": [				
+		
+	],	    
+	"frdlweb:stage.generate.container.build": [				
+		
+	],	    
+	"frdlweb:stage.generate.container.finalize": [				
+		
+	],	    
+	"frdlweb:stage.generate.misc-autoloader": [				
+		
+	],	    
+	"frdlweb:stage.generate.class.Webfan\App\Shield": [				
+		
+	],	    
+	"frdlweb:stage.generate.class.compiled\project": [				
+		
+	],
+	"frdlweb:stage.write.project.json": [				
+		
+	],	    
+	"frdlweb:stage.prune.cache.templates": [				
+		
+	],
+	"frdlweb:stage.compile.events": [				
+		
+	],	    
+	"frdlweb:stage.compile.frdl-module-scripts": [				
+		
+	],
+	"frdlweb:stage.compile.frdl-modules": [				
+		
+	],	    
+	"frdlweb:stage.compile.db.modules": [				
+		
+	],
+	"frdlweb:stage.compile.db": [				
+		
+	],	    
+	"frdlweb:stage.compile.after": [				
+		
+	],
+	"frdlweb:pipeline.compile": [				
+		
+	],	    
+	"frdlweb:pipeline.bundlejs": [				
+		
+	],
+	"frdlweb:support.checks": [				
+		
+	],	    
+	"frdlweb:check.issues": [				
+		
+	],    
+	"frdlweb:check.updates": [				
+		
+	],    
+	"frdlweb:check.suggested": [				
+		
+	],    
+	"frdlweb:check.security": [				
+		
+	],    
+			
+        "pre-package-install": "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processPackageEvent",
+        "post-package-install": "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processPackageEvent",
+        "pre-package-update": "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processPackageEvent",
+        "post-package-update": "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processPackageEvent",
+        "pre-package-uninstall": "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processPackageEvent",
+        "post-package-uninstall": "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processPackageEvent",
+			
+        "post-update-cmd": [
+			"Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processCommandEvent"
+		],
+        "post-install-cmd": [
+            "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processCommandEvent"
+        ],
+        "post-autoload-dump": [
+            "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processCommandEvent"
+        ],			
+		"post-root-package-install": [
+            "Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processCommandEvent"
+        ],
+        "post-create-project-cmd": [
+			"Webfan\\Support\\ComposerInstallersExtender\\PackageUpdater::processCommandEvent",
+            "@test"
+        ]
+    },	
   "autoload": {
         "psr-4": {
             "example\\org\\": "src/example.org/",
